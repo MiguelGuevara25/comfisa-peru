@@ -1,94 +1,51 @@
-"use client";
-
-import { useState } from "react";
+import Footer from "@/src/components/Footer";
+import Navbar from "@/src/components/Navbar";
+import { locations } from "@/src/data";
+import { ArrowRight, MapPin } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
-import { Menu, Phone, X } from "lucide-react";
-
-const nav = [
-  { to: "/", label: "Inicio" },
-  { to: "/nosotros", label: "Nosotros" },
-  { to: "/productos", label: "Productos" },
-  { to: "/locales", label: "Locales" },
-  { to: "/contacto", label: "Contacto" },
-];
 
 export default function Home() {
-  const [open, setOpen] = useState(false);
-
   return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6">
-        <Link
-          href="/"
-          className="flex items-center gap-2"
-          aria-label="Comfisa - Inicio"
-        >
-          <Image
-            src="/logoComfisa.png"
-            alt="Comfisa - Materiales de construcción"
-            width={160}
-            height={54}
-            className="h-11 w-auto"
-          />
-        </Link>
-
-        <nav className="hidden items-center gap-1 md:flex">
-          {nav.map((n) => (
-            <Link
-              key={n.to}
-              href={n.to}
-              // activeOptions={{ exact: n.to === "/" }}
-              className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-surface hover:text-brand-blue"
-              // activeProps={{ className: "text-brand-blue bg-surface" }}
-            >
-              {n.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="hidden items-center gap-3 md:flex">
-          <a
-            href="tel:+51964869923"
-            className="inline-flex items-center gap-2 rounded-md bg-brand-orange px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-orange-dark hover:shadow-md"
-          >
-            <Phone className="h-4 w-4" />
-            Cotizar ahora
-          </a>
-        </div>
-
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          className="rounded-md p-2 text-brand-blue md:hidden"
-          aria-label={open ? "Cerrar menú" : "Abrir menú"}
-        >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
-      </div>
-      {open && (
-        <div className="border-t border-border bg-background md:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3">
-            {nav.map((n) => (
-              <Link
-                key={n.to}
-                href={n.to}
-                onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-surface"
-                // activeProps={{ className: "text-brand-blue bg-surface" }}
-              >
-                {n.label}
-              </Link>
+    <>
+      <Navbar />
+      <section className="bg-surface py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mb-12 max-w-2xl">
+            <span className="text-xs font-semibold uppercase tracking-widest text-brand-orange">
+              Cobertura
+            </span>
+            <h2 className="mt-2 text-3xl font-bold text-brand-blue sm:text-4xl">
+              5 locales estratégicos en Lima
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              Estamos cerca de tu obra. Visita cualquiera de nuestras sedes para asesoría y compra directa.
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {locations.slice(0, 3).map((l) => (
+              <div key={l.slug} className="card-hover rounded-xl bg-background p-5 ring-1 ring-border">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-brand-orange">
+                  {l.short}
+                </span>
+                <h3 className="mt-2 font-bold text-brand-blue">{l.name}</h3>
+                <p className="mt-2 flex items-start gap-2 text-sm text-muted-foreground">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" />
+                  {l.address}, {l.district}
+                </p>
+              </div>
             ))}
-            <a
-              href="tel:+51964869923"
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-md bg-brand-orange px-4 py-2.5 text-sm font-semibold text-white"
+          </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/locales"
+              className="inline-flex items-center gap-2 rounded-md bg-brand-blue px-6 py-3 text-sm font-semibold text-white hover:bg-brand-blue-dark"
             >
-              <Phone className="h-4 w-4" /> Cotizar ahora
-            </a>
-          </nav>
+              Ver los 5 locales <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
-      )}
-    </header>
+      </section>
+      <Footer />
+    </>
   );
 }
