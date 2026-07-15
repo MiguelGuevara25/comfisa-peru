@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/src/components/Breadcrumbs";
 import { locations } from "@/src/data";
 import { mapEmbedUrl, mapLinkUrl } from "@/src/utils";
 import { Clock, ExternalLink, MapPin, Phone } from "lucide-react";
@@ -5,6 +6,7 @@ import { Clock, ExternalLink, MapPin, Phone } from "lucide-react";
 export default function Locales() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Locales" }]} />
       <section className="bg-brand-blue py-14 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <span className="text-xs font-semibold uppercase tracking-widest text-brand-orange">
