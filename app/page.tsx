@@ -1,3 +1,4 @@
+import Categories from "@/src/components/Categories";
 import CTA from "@/src/components/CTA";
 import Hero from "@/src/components/Hero";
 import Values from "@/src/components/Values";
@@ -10,6 +11,7 @@ export default function Home() {
     <>
       <Hero />
       <Values />
+      <Categories />
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-12 max-w-2xl">
@@ -51,7 +53,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <CTA />
     </>
   );
