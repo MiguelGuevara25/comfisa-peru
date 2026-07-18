@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/src/components/Navbar";
+import Footer from "@/src/components/Footer";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -27,7 +29,11 @@ export default function RootLayout({
       lang="es"
       className={`${inter.variable} ${outfit.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

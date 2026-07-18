@@ -1,7 +1,5 @@
 import CTA from "@/src/components/CTA";
-import Footer from "@/src/components/Footer";
 import Hero from "@/src/components/Hero";
-import Navbar from "@/src/components/Navbar";
 import Values from "@/src/components/Values";
 import { locations } from "@/src/data";
 import { ArrowRight, MapPin } from "lucide-react";
@@ -10,7 +8,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
       <Values />
       <section className="bg-surface py-20">
@@ -56,7 +53,6 @@ export default function Home() {
       </section>
 
       <CTA />
-      <Footer />
     </>
   );
 }

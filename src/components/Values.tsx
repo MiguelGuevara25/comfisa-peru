@@ -1,31 +1,10 @@
-import { CheckCircle2, Package, Truck, Users } from "lucide-react";
+import { values } from "../data";
 
 export default function Values() {
   return (
     <section className="border-b border-border bg-surface py-14">
       <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
-        {[
-          {
-            icon: Package,
-            title: "Stock permanente",
-            desc: "Reposición diaria en todos nuestros locales.",
-          },
-          {
-            icon: Truck,
-            title: "Entregas rápidas",
-            desc: "Delivery a obra en toda Lima.",
-          },
-          {
-            icon: Users,
-            title: "Asesoría experta",
-            desc: "Te ayudamos a elegir el material correcto.",
-          },
-          {
-            icon: CheckCircle2,
-            title: "Marcas líderes",
-            desc: "Trabajamos solo con productos certificados.",
-          },
-        ].map((f) => (
+        {values.map((f) => (
           <div
             key={f.title}
             className="flex gap-4 rounded-xl bg-background p-5 shadow-sm ring-1 ring-border"
