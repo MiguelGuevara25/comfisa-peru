@@ -5,7 +5,7 @@ import { locations } from '../data'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#14161c] text-white">
+    <footer className="bg-brand-blue text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-4">
           <div>

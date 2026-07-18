@@ -1,5 +1,8 @@
+import CTA from "@/src/components/CTA";
 import Footer from "@/src/components/Footer";
+import Hero from "@/src/components/Hero";
 import Navbar from "@/src/components/Navbar";
+import Values from "@/src/components/Values";
 import { locations } from "@/src/data";
 import { ArrowRight, MapPin } from "lucide-react";
 import Link from "next/link";
@@ -8,6 +11,8 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <Hero />
+      <Values />
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-12 max-w-2xl">
@@ -18,12 +23,16 @@ export default function Home() {
               5 locales estratégicos en Lima
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Estamos cerca de tu obra. Visita cualquiera de nuestras sedes para asesoría y compra directa.
+              Estamos cerca de tu obra. Visita cualquiera de nuestras sedes para
+              asesoría y compra directa.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {locations.slice(0, 3).map((l) => (
-              <div key={l.slug} className="card-hover rounded-xl bg-background p-5 ring-1 ring-border">
+              <div
+                key={l.slug}
+                className="card-hover rounded-xl bg-background p-5 ring-1 ring-border"
+              >
                 <span className="text-[10px] font-bold uppercase tracking-widest text-brand-orange">
                   {l.short}
                 </span>
@@ -45,6 +54,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <CTA />
       <Footer />
     </>
   );
