@@ -51,7 +51,7 @@ export default function Footer() {
                   </p>
                   <p className="mt-1 flex items-center gap-1.5 text-white/70">
                     <Phone className="h-3.5 w-3.5 text-brand-orange" />
-                    {l.phones[0]}
+                    {l.phones[0]} / {l.phones[1]}
                   </p>
                 </li>
               ))}
