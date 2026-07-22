@@ -85,7 +85,7 @@ export default function Productos() {
                     Cotizar
                   </a>
                   <a
-                    href={`https://wa.me/51964869923?text=${encodeURIComponent(`Hola Comfisa, necesito cotización de ${c.name}.`)}`}
+                    href={`https://wa.me/51908913641?text=${encodeURIComponent(`Hola Comfisa, necesito cotización de ${c.name}.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-brand-blue hover:bg-surface"
