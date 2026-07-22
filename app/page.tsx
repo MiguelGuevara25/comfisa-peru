@@ -19,7 +19,7 @@ export default function Home() {
               Cobertura
             </span>
             <h2 className="mt-2 text-3xl font-bold text-brand-blue sm:text-4xl">
-              5 locales estratégicos en Lima
+              {locations.length} locales estratégicos en Lima
             </h2>
             <p className="mt-3 text-muted-foreground">
               Estamos cerca de tu obra. Visita cualquiera de nuestras sedes para

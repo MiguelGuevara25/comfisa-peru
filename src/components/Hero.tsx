@@ -9,12 +9,12 @@ export default function Hero() {
       <div className="absolute inset-0 opacity-25">
         <Image
           src={heroImg}
-          alt=""
+          alt="o"
           width={1600}
           height={1200}
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-blue/85 to-brand-blue/20" />
+        <div className="absolute inset-0 bg-linear-to-r from-brand-blue via-brand-blue/85 to-brand-blue/20" />
       </div>
       <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:py-32">
         <div className="lg:col-span-7">
@@ -55,7 +55,7 @@ export default function Hero() {
               <dt className="text-xs uppercase tracking-wider text-white/60">
                 Locales
               </dt>
-              <dd className="mt-1 text-3xl font-bold text-brand-orange">5</dd>
+              <dd className="mt-1 text-3xl font-bold text-brand-orange">4</dd>
             </div>
             <div>
               <dt className="text-xs uppercase tracking-wider text-white/60">
@@ -67,7 +67,7 @@ export default function Hero() {
               <dt className="text-xs uppercase tracking-wider text-white/60">
                 Años
               </dt>
-              <dd className="mt-1 text-3xl font-bold text-brand-orange">15+</dd>
+              <dd className="mt-1 text-3xl font-bold text-brand-orange">5+</dd>
             </div>
           </dl>
         </div>

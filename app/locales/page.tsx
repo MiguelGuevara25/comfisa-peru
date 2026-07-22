@@ -15,11 +15,11 @@ export default function Locales() {
             Cobertura Lima
           </span>
           <h1 className="mt-2 max-w-3xl text-4xl font-bold sm:text-5xl">
-            Nuestros 5 locales
+            Nuestros {locations.length} locales
           </h1>
           <p className="mt-4 max-w-2xl text-white/80">
-            Elige el local más cercano a tu obra. Todos manejan stock propio, atención personalizada
-            y coordinación de despachos.
+            Elige el local más cercano a tu obra. Todos manejan stock propio,
+            atención personalizada y coordinación de despachos.
           </p>
         </div>
       </section>
@@ -32,14 +32,14 @@ export default function Locales() {
               className="overflow-hidden rounded-2xl bg-background shadow-sm ring-1 ring-border"
             >
               {/* Cover photo */}
-              <div className="relative aspect-[16/6] w-full overflow-hidden bg-surface sm:aspect-[16/5]">
+              <div className="relative aspect-16/6 w-full overflow-hidden bg-surface sm:aspect-16/5">
                 {/* <ResponsivePicture
                   data={l.image}
                   alt={`Fachada del local ${l.name} de Comfisa`}
                   sizes="(min-width: 1280px) 1200px, 100vw"
                   className="h-full w-full object-cover"
                 /> */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-3 p-5 sm:p-7">
                   <div>
                     <div className="flex items-center gap-3">
@@ -63,7 +63,9 @@ export default function Locales() {
                   <div className="space-y-3 text-sm">
                     <p className="flex items-start gap-2 text-foreground">
                       <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" />
-                      <span>{l.address}, {l.district}</span>
+                      <span>
+                        {l.address}, {l.district}
+                      </span>
                     </p>
                     <div className="flex items-start gap-2">
                       <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" />
