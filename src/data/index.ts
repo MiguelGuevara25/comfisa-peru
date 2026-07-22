@@ -28,7 +28,7 @@ export const locations: Location[] = [
     short: "Sede Comercial",
     address: "Av. Manuel Valle 33",
     district: "Lima 15823",
-    phones: ["922 730 199"],
+    phones: ["922 730 199", "908 913 608"],
     hours: {
       weekdays: "L-V: 7:30 am - 5:30 pm",
       saturday: "S: 7:30 am - 2:00 pm",
@@ -43,7 +43,7 @@ export const locations: Location[] = [
     short: "Almacén Principal",
     address: "Paul Poblet Lind Mz. A lote 9, Urb. Huertos de Lurín",
     district: "Pachacamac, Lima",
-    phones: ["922 730 199"],
+    phones: ["922 730 199", "908 913 608"],
     hours: {
       weekdays: "L-V: 7:30 am - 5:30 pm",
       saturday: "S: 7:30 am - 2:00 pm",
@@ -58,7 +58,7 @@ export const locations: Location[] = [
     short: "Villa El Salvador",
     address: "Auxiliar Av. Pachacutec, Mz 6, Lte 2, Parcela 2A",
     district: "Villa el Salvador, Lima",
-    phones: ["922 730 199"],
+    phones: ["922 730 720", "908 913 608"],
     hours: {
       weekdays: "L-V: 7:30 am - 5:30 pm",
       saturday: "S: 7:30 am - 2:00 pm",
