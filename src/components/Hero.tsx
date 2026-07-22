@@ -30,7 +30,7 @@ export default function Hero() {
 
           <p className="mt-6 max-w-xl text-lg text-white/85">
             Cemento, fierro, ladrillos, agregados, herramientas y todo lo que tu
-            obra necesita. 5 locales en Lima con stock permanente y precios de
+            obra necesita. 4 locales en Lima con stock permanente y precios de
             mayorista.
           </p>
 
