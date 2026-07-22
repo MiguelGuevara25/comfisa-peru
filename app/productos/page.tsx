@@ -57,9 +57,12 @@ export default function Productos() {
                 </div>
               </div>
               <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                <span className="text-xs font-semibold uppercase tracking-widest text-brand-orange">
+                <span className="hidden md:block text-xs font-semibold uppercase tracking-widest text-brand-orange">
                   {`0${i + 1}`.slice(-2)} · Categoría
                 </span>
+
+                <hr className="my-4 border-border md:hidden" />
+
                 <h2 className="mt-2 text-3xl font-bold text-brand-blue uppercase">
                   {c.name}
                 </h2>

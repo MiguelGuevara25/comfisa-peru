@@ -15,18 +15,17 @@ export default function Nosotros() {
               Nuestra historia
             </span>
             <h1 className="mt-2 text-4xl font-bold text-brand-blue sm:text-5xl">
-              Construyendo confianza desde hace más de 15 años
+              Construyendo confianza desde 2017
             </h1>
             <p className="mt-5 text-muted-foreground">
-              Comfisa nació con la misión de acercar los mejores materiales de
-              construcción a las obras de todo Lima. Hoy operamos 5 locales
-              estratégicos en Pachacamac, Villa El Salvador y Pucusana,
-              atendiendo tanto a maestros de obra como a grandes constructoras.
-            </p>
-            <p className="mt-4 text-muted-foreground">
-              Trabajamos con las marcas líderes del mercado peruano — Sol,
-              Andino, Pacasmayo, Aceros Arequipa — para garantizar la calidad y
-              durabilidad de cada proyecto.
+              En COMFISA creemos que cada gran proyecto comienza con materiales
+              de calidad y un servicio en el que nuestros clientes puedan
+              confiar. Desde 2017, trabajamos para abastecer a ferreterías,
+              constructoras, obras y todo tipo de proyectos de construcción,
+              ofreciendo atención personalizada, asesoría especializada y un
+              firme compromiso con la puntualidad, la calidad y el buen
+              servicio. Nuestro objetivo es ser el aliado estratégico de
+              nuestros clientes, contribuyendo al éxito de cada proyecto.
             </p>
           </div>
           <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-border">
@@ -48,23 +47,23 @@ export default function Nosotros() {
             {[
               {
                 icon: Target,
-                title: "Misión",
-                text: "Ofrecer materiales de construcción de calidad al mejor precio para hacer realidad cada proyecto.",
+                title: "Nuestra misión",
+                text: "Brindar soluciones integrales en materiales de construcción, ofreciendo productos de calidad, precios competitivos y un servicio confiable que impulse el crecimiento de ferreterías, constructoras y todo tipo de proyectos.",
               },
               {
                 icon: Award,
-                title: "Calidad",
-                text: "Trabajamos únicamente con marcas certificadas y con reposición constante de stock.",
+                title: "Calidad garantizada",
+                text: "Seleccionamos cuidadosamente nuestros productos para ofrecer un abastecimiento confiable y responder a las necesidades de cada cliente.",
               },
               {
                 icon: HeartHandshake,
-                title: "Atención",
-                text: "Asesoría personalizada por personal con experiencia en obra.",
+                title: "Atención personalizada",
+                text: "Nuestro equipo brinda asesoría especializada para ayudarte a encontrar la mejor solución, con un servicio cercano, ágil y comprometido.",
               },
               {
                 icon: Truck,
-                title: "Logística",
-                text: "Delivery ágil a toda Lima y despachos grandes coordinados.",
+                title: "Logística eficiente",
+                text: "Realizamos entregas oportunas y coordinadas para mantener el abastecimiento de ferreterías, obras y proyectos de construcción en toda Lima.",
               },
             ].map((v) => (
               <div
@@ -96,20 +95,23 @@ export default function Nosotros() {
           </div>
           <div className="order-1 lg:order-2">
             <h2 className="text-3xl font-bold text-brand-blue">
-              Al lado de tu obra
+              Siempre cerca de tu obra
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Con 5 locales distribuidos en Lima Sur, Comfisa te acerca los
-              materiales que necesitas — sin largas esperas ni sobreprecios.
-              Cada sede maneja stock propio para responder a obras grandes y
-              pedidos pequeños con la misma seriedad.
+              Con 4 locales estratégicamente ubicados en Lima Sur, COMFISA
+              garantiza una atención rápida, disponibilidad de productos y
+              entregas oportunas para que tu proyecto nunca se detenga. Nuestro
+              equipo trabaja con eficiencia y compromiso para responder a cada
+              necesidad, desde pedidos puntuales hasta abastecimientos de gran
+              volumen.
             </p>
             <ul className="mt-6 space-y-2 text-sm">
               {[
-                "Precios mayoristas para constructoras y empresas.",
-                "Facturación electrónica inmediata.",
-                "Delivery coordinado en toda Lima Metropolitana.",
-                "Asesoría técnica sin costo.",
+                "Stock disponible para una atención inmediata.",
+                "Precios competitivos para compras al por mayor y menor.",
+                "Facturación electrónica al instante.",
+                "Delivery coordinado en Lima Metropolitana.",
+                "Asesoría personalizada para cada proyecto.",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-orange" />
