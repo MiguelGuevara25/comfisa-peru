@@ -48,9 +48,9 @@ export default function Categories() {
               </div>
               <div className="p-4">
                 <h3 className="font-semibold text-brand-blue">{c.name}</h3>
-                <p className="mt-1 line-clamp-2 text-xs text-muted-foreground">
+                {/* <p className="mt-1 line-clamp-2 text-xs text-muted-foreground">
                   {c.short}
-                </p>
+                </p> */}
               </div>
               <span className="absolute right-3 top-3 rounded-full bg-brand-orange px-2 py-0.5 text-[10px] font-bold uppercase text-white opacity-0 transition-opacity group-hover:opacity-100">
                 Ver
