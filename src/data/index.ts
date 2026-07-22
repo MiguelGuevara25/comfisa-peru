@@ -39,7 +39,7 @@ export const locations: Location[] = [
 
   {
     slug: "paul-poblet",
-    name: "Almacén Paul Poblet",
+    name: "Almacén Los Rosales",
     short: "Almacén Principal",
     address: "Paul Poblet Lind Mz. A lote 9, Urb. Huertos de Lurín",
     district: "Pachacamac, Lima",

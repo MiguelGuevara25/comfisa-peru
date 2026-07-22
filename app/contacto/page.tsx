@@ -24,7 +24,7 @@ export default function Contacto() {
 
             <div className="mt-8 space-y-3">
               <a
-                href="tel:+51994045254"
+                href="tel:+51964869923"
                 className="flex items-center gap-4 rounded-xl border border-border bg-background p-4 hover:border-brand-orange hover:bg-surface"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-blue text-white">
@@ -34,11 +34,11 @@ export default function Contacto() {
                   <p className="text-xs uppercase text-muted-foreground">
                     Teléfono
                   </p>
-                  <p className="font-semibold text-brand-blue">994 045 254</p>
+                  <p className="font-semibold text-brand-blue">964 869 923</p>
                 </div>
               </a>
               <a
-                href="https://wa.me/51964869923"
+                href="https://wa.me/51908913641"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 rounded-xl border border-border bg-background p-4 hover:border-brand-orange hover:bg-surface"
@@ -51,7 +51,25 @@ export default function Contacto() {
                     WhatsApp
                   </p>
                   <p className="font-semibold text-brand-blue">
-                    +51 964 869 923
+                    +51 908 913 641
+                  </p>
+                </div>
+              </a>
+              <a
+                href="https://wa.me/51994045254"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 rounded-xl border border-border bg-background p-4 hover:border-brand-orange hover:bg-surface"
+              >
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-orange text-white">
+                  <MessageCircle className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase text-muted-foreground">
+                    WhatsApp
+                  </p>
+                  <p className="font-semibold text-brand-blue">
+                    +51 994 045 254
                   </p>
                 </div>
               </a>
@@ -67,7 +85,7 @@ export default function Contacto() {
                     Correo
                   </p>
                   <p className="font-semibold text-brand-blue">
-                    ventas@comfisa.com.pe
+                    ventas@grupocomfisa.com
                   </p>
                 </div>
               </a>
@@ -82,7 +100,7 @@ export default function Contacto() {
                 const fd = new FormData(e.currentTarget);
                 const msg = `Hola Comfisa, soy ${fd.get("nombre")}.\n\n${fd.get("mensaje")}\n\nTeléfono: ${fd.get("telefono")}`;
                 window.open(
-                  `https://wa.me/51964869923?text=${encodeURIComponent(msg)}`,
+                  `https://wa.me/51994045254?text=${encodeURIComponent(msg)}`,
                   "_blank",
                 );
               }}

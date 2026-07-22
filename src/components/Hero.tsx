@@ -1,14 +1,15 @@
 import { ArrowRight, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import heroImg from "../assets/hero-warehouse.jpg";
+import heroComfisa from "../assets/hero-comfisa.jpg";
+import localFlavi from "../assets/local-flavi.jpeg";
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-brand-blue text-white">
       <div className="absolute inset-0 opacity-25">
         <Image
-          src={heroImg}
+          src={heroComfisa}
           alt="o"
           width={1600}
           height={1200}
@@ -17,21 +18,22 @@ export default function Hero() {
         <div className="absolute inset-0 bg-linear-to-r from-brand-blue via-brand-blue/85 to-brand-blue/20" />
       </div>
       <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:py-32">
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-6">
           <span className="inline-flex items-center gap-2 rounded-full bg-brand-orange/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-brand-orange ring-1 ring-brand-orange/40">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-orange" />
             Distribución mayorista y minorista
           </span>
 
           <h1 className="mt-6 text-balance text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
-            Materiales que <span className="text-brand-orange">construyen</span>{" "}
-            tu proyecto
+            Construye con confianza
+            construye con <span className="text-brand-orange">COMFISA</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-white/85">
-            Cemento, fierro, ladrillos, agregados, herramientas y todo lo que tu
-            obra necesita. 4 locales en Lima con stock permanente y precios de
-            mayorista.
+            GRUPO COMFISA es una empresa peruana dedicada a la venta de
+            materiales para la construcción. Desde el 2017, ofrecemos productos
+            de calidad, atención personalizada y un servicio confiable para cada
+            proyecto.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -71,13 +73,14 @@ export default function Hero() {
             </div>
           </dl>
         </div>
-        <div className="hidden lg:col-span-5 lg:block">
+
+        <div className="hidden lg:col-span-6 lg:block">
           <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10">
             <Image
-              src={heroImg}
+              src={localFlavi}
               alt="Almacén de materiales de construcción Comfisa"
-              width={1600}
-              height={1200}
+              width={2600}
+              height={2200}
               className="h-full w-full object-cover"
             />
           </div>

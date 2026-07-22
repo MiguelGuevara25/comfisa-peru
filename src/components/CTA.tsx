@@ -29,10 +29,10 @@ export default function CTA() {
                 Solicitar cotización <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href="tel:+51994045254"
+                href="tel:+51964869923"
                 className="inline-flex items-center gap-2 rounded-md border border-brand-blue/20 bg-white px-6 py-3 text-sm font-semibold text-brand-blue hover:bg-brand-blue/5"
               >
-                Llamar 994 045 254
+                Llamar 964 869 923
               </a>
             </div>
           </div>
