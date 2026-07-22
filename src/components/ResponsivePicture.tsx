@@ -1,17 +1,24 @@
 'use client'
 
 import { ImgHTMLAttributes, useState } from "react";
+import { StaticImageData } from "next/image";
 
 export interface PictureData {
-  sources: Record<string, string>;
-  img: { src: string; w: number; h: number };
+  sources?: Record<string, string>;
+  img: {
+    src: string;
+    w?: number;
+    h?: number;
+    width?: number;
+    height?: number;
+  };
 }
 
-interface Props extends Omit<
-  ImgHTMLAttributes<HTMLImageElement>,
-  "src" | "srcSet"
-> {
-  data: PictureData;
+export type ResponsivePictureSource = PictureData | StaticImageData | string;
+
+export interface Props
+  extends Omit<ImgHTMLAttributes<HTMLImageElement>, "src" | "srcSet"> {
+  data: ResponsivePictureSource;
   sizes?: string;
   alt: string;
   /** Show a shimmer placeholder underneath the image until it loads. Default true. */
@@ -28,6 +35,42 @@ const MIME: Record<string, string> = {
   png: "image/png",
 };
 
+function parseImageData(data: ResponsivePictureSource) {
+  if (typeof data === "string") {
+    return {
+      src: data,
+      width: undefined as number | undefined,
+      height: undefined as number | undefined,
+      sources: undefined as Record<string, string> | undefined,
+    };
+  }
+
+  if ("img" in data && data.img) {
+    return {
+      src: data.img.src,
+      width: data.img.w ?? data.img.width,
+      height: data.img.h ?? data.img.height,
+      sources: data.sources,
+    };
+  }
+
+  if ("src" in data && typeof data.src === "string") {
+    return {
+      src: data.src,
+      width: data.width,
+      height: data.height,
+      sources: undefined as Record<string, string> | undefined,
+    };
+  }
+
+  return {
+    src: "",
+    width: undefined,
+    height: undefined,
+    sources: undefined,
+  };
+}
+
 export default function ResponsivePicture({
   data,
   sizes = "100vw",
@@ -36,9 +79,10 @@ export default function ResponsivePicture({
   loading = "lazy",
   showSkeleton = true,
   wrapperClassName = "",
+  onLoad,
   ...rest
 }: Props) {
-  const { sources, img } = data;
+  const { src, width, height, sources } = parseImageData(data);
   const order = ["avif", "webp", "jpg", "jpeg", "png"];
   const [loaded, setLoaded] = useState(false);
 
@@ -55,19 +99,28 @@ export default function ResponsivePicture({
         />
       )}
       <picture>
-        {order
-          .filter((f) => sources[f])
-          .map((f) => (
-            <source key={f} type={MIME[f]} srcSet={sources[f]} sizes={sizes} />
-          ))}
+        {sources &&
+          order
+            .filter((f) => Boolean(sources[f]))
+            .map((f) => (
+              <source
+                key={f}
+                type={MIME[f]}
+                srcSet={sources[f]}
+                sizes={sizes}
+              />
+            ))}
         <img
-          src={img.src}
-          width={img.w}
-          height={img.h}
+          src={src}
+          width={width}
+          height={height}
           alt={alt}
           loading={loading}
           decoding="async"
-          onLoad={() => setLoaded(true)}
+          onLoad={(e) => {
+            setLoaded(true);
+            onLoad?.(e);
+          }}
           className={`relative transition-opacity duration-500 ${
             loaded ? "opacity-100" : "opacity-0"
           } ${className ?? ""}`}
@@ -77,3 +130,4 @@ export default function ResponsivePicture({
     </div>
   );
 }
+

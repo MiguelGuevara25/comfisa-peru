@@ -1,6 +1,17 @@
 import { CheckCircle2, Package, Truck, Users } from "lucide-react";
 import { Category, Location, Values } from "../interfaces";
-import img from "../assets/hero-warehouse.jpg";
+import cementoInka from "../assets/cemento-inka.jpeg";
+import bacoAceros from "../assets/baco-aceros.jpeg";
+import bacoImportadas from "../assets/baco-importadas.jpeg";
+import planchasTecnopor from "../assets/planchas-tecnopor.jpeg";
+import ladrillosPiramide from "../assets/ladrillos-piramide.jpeg";
+import adoquinesBloques from "../assets/adoquines-bloques.jpeg";
+import separadoresConcreto from "../assets/separadores-concreto.jpeg";
+import alambresClavos from "../assets/alambres-clavos.jpeg";
+import almacenPaul from "../assets/almacen-paul-poblet.jpeg";
+import localFlavi from "../assets/local-flavi.jpeg";
+import localVilla from "../assets/local-villa.jpeg";
+import localValery from "../assets/local-valery.jpeg";
 
 export const nav = [
   { to: "/", label: "Inicio" },
@@ -23,7 +34,7 @@ export const locations: Location[] = [
       saturday: "S: 7:30 am - 2:00 pm",
     },
     mapQuery: "Av. Manuel Valle 33, Lima 15823, Perú",
-    image: img,
+    image: localFlavi,
   },
 
   {
@@ -38,9 +49,9 @@ export const locations: Location[] = [
       saturday: "S: 7:30 am - 2:00 pm",
     },
     mapQuery: "Urb. Huertos de Lurín, Pachacamac, Lima, Perú",
-    image: img,
+    image: almacenPaul,
   },
-  
+
   {
     slug: "hanna",
     name: "Sede Villa el salvador",
@@ -52,9 +63,10 @@ export const locations: Location[] = [
       weekdays: "L-V: 7:30 am - 5:30 pm",
       saturday: "S: 7:30 am - 2:00 pm",
     },
-    mapQuery: "Grupo Residencial 21 sector 3, Villa El Salvador, Lima, Perú",
-    image: img,
+    mapQuery: "-12.213989, -76.922895",
+    image: localVilla,
   },
+
   {
     slug: "steel-house",
     name: "Steel House Valery S.A.C",
@@ -67,131 +79,95 @@ export const locations: Location[] = [
       saturday: "S: 7:30 am - 2:00 pm",
     },
     mapQuery: "Asociación de Vivienda La Ponderosa, Pucusana, Lima, Perú",
-    image: img,
+    image: localValery,
   },
 ];
 
 export const categories: Category[] = [
   {
     slug: "cemento",
-    name: "Cemento",
-    short: "Portland Tipo I, IP, V y cementos especiales",
+    name: "Cemento Inka",
+    short: "Portland Tipo I, IP, V y cementos especialses",
     description:
-      "Cemento de las marcas líderes del mercado peruano. Ideal para estructuras, contrapisos, columnas y todo tipo de obras.",
-    image: img,
-    items: [
-      "Cemento Sol",
-      "Cemento Andino",
-      "Cemento Pacasmayo",
-      "Cemento Antisalitre",
-    ],
+      "Fabricado bajo altos estándares de calidad, Cemento Inka ofrece resistencia, rendimiento y durabilidad para construcciones seguras y confiables.",
+    image: cementoInka,
+    items: ["Portland Tipo GU", "Portland Tipo 1Co", "Portland Tipo HS"],
   },
   {
     slug: "fierro",
-    name: "Fierro y Acero",
+    name: "BACO - Aceros Arequipa",
     short: "Corrugado, liso y perfiles estructurales",
     description:
-      "Fierro de construcción grado 60, en varillas de 1/4″ a 1″. Mallas electrosoldadas, alambre negro y perfiles.",
-    image: img,
-    items: [
-      'Fierro corrugado 1/2"',
-      "Alambrón",
-      "Malla electrosoldada",
-      "Alambre #16",
-    ],
+      "Las barras corrugadas Aceros Arequipa ofrecen alta resistencia, excelente adherencia y calidad certificada, brindando mayor seguridad y durabilidad para todo tipo de obras.",
+    image: bacoAceros,
+    items: ['BACO - 1", 3/4, 5/8, 1/2, 3/8', "BACO - 12mm, 8mm, 6mm"],
   },
+
+  {
+    slug: "fierro-importado",
+    name: "BACO - Importado",
+    short: "Corrugado, liso y perfiles estructurales",
+    description:
+      "Las barras corrugadas importadas cumplen con las normas técnicas vigentes, ofreciendo alta resistencia, calidad y seguridad para todo tipo de construcciones.",
+    image: bacoImportadas,
+    items: ['BACO - 1", 3/4, 5/8, 1/2, 3/8', "BACO - 12mm, 8mm, 6mm"],
+  },
+
+  {
+    slug: "alambres-clavos",
+    name: "Alambres y Clavos",
+    short: "King Kong, pandereta y techo",
+    description:
+      "Alambres y clavos de aceros de alta calidad, diseñados para ofrecer resistencia, durabilidad y un excelente desempeño en todo tipo de trabajos de construcción",
+    image: alambresClavos,
+    items: ["Alambre #16 - #08", 'Clavos 2", 2 1/2", 3", 4"'],
+  },
+
   {
     slug: "ladrillos",
-    name: "Ladrillos",
+    name: "Ladrillos Pirámide",
     short: "King Kong, pandereta y techo",
     description:
       "Ladrillos de arcilla cocida para muros portantes, tabiquería y aligerado de techos. Alta resistencia.",
-    image: img,
+    image: ladrillosPiramide,
     items: [
-      "King Kong 18 huecos",
-      "Pandereta",
-      "Ladrillo techo 12/15/20",
-      "Ladrillo caravista",
+      "Techos 20, 15, 12, 8",
+      "Ladrillo King kong 18 - KK 30%",
+      "Ladrillo Pandereta",
+      "Ladrillo Caravista 9, 6",
+      "Ladrillo Pastelero",
+      "Tejas",
     ],
   },
+
   {
-    slug: "agregados",
-    name: "Agregados",
-    short: "Arena, piedra y hormigón",
+    slug: "prefabricados-concreto",
+    name: "Prefabricados de Concreto",
+    short: "King Kong, pandereta y techo",
     description:
-      "Agregados seleccionados y zarandeados: arena fina, arena gruesa, piedra chancada 1/2″ y 3/4″, confitillo.",
-    image: img,
-    items: ["Arena fina", "Arena gruesa", 'Piedra chancada 1/2"', "Hormigón"],
+      "Fabricamos adoquines y bloques de concreto de alta calidad, diseñados para brindar resistencia, durabilidad y un excelente acabado en proyectos de construcción, pavimentación y urbanización.",
+    image: adoquinesBloques,
+    items: ["Adoquines natural rojo y negro", "Bloques de concreto"],
   },
+
   {
-    slug: "herramientas",
-    name: "Herramientas",
-    short: "Manuales y eléctricas profesionales",
+    slug: "separadores",
+    name: "Separadores de Concreto",
+    short: "King Kong, pandereta y techo",
     description:
-      "Todo para el maestro de obra: palas, carretillas, taladros, amoladoras, escuadras, wincha y equipos de protección.",
-    image: img,
-    items: [
-      "Carretilla buggy",
-      "Taladros percutores",
-      "Amoladoras",
-      "EPP y guantes",
-    ],
+      "Somos fabricantes de separadores prefabricados de concreto de alta resistencia, elaborados con estrictos controles de calidad para asegurar el recubrimiento adecuado del acero",
+    image: separadoresConcreto,
+    items: ["Separadores 2, 2.5, 3, 4, 5, 7, 7.5"],
   },
+
   {
-    slug: "gasfiteria",
-    name: "Gasfitería",
-    short: "Tuberías PVC y accesorios",
+    slug: "tecnopor",
+    name: "Planchas de Tecnopor",
+    short: "King Kong, pandereta y techo",
     description:
-      "Sistemas de agua fría, caliente y desagüe. Tuberías PVC, CPVC y accesorios de las mejores marcas.",
-    image: img,
-    items: [
-      "Tubería PVC SAP/SAL",
-      "Codos y tees",
-      "Válvulas de bola",
-      "Pegamento PVC",
-    ],
-  },
-  {
-    slug: "electrico",
-    name: "Eléctrico",
-    short: "Cableado, canalización y accesorios",
-    description:
-      "Conductores THW, tuberías conduit, tableros, interruptores termomagnéticos, tomacorrientes y accesorios.",
-    image: img,
-    items: [
-      "Cable THW 14/12/10",
-      "Interruptores termo.",
-      "Tomacorrientes",
-      "Tubo PVC-SEL",
-    ],
-  },
-  {
-    slug: "techos",
-    name: "Techos y Coberturas",
-    short: "Calamina, planchas y tejas",
-    description:
-      "Coberturas para viviendas, almacenes y proyectos industriales. Calamina galvanizada, tejaandina y policarbonato.",
-    image: img,
-    items: [
-      "Calamina galvanizada",
-      "Teja Andina Eternit",
-      "Planchas onduladas",
-      "Policarbonato",
-    ],
-  },
-  {
-    slug: "pinturas",
-    name: "Pinturas y Acabados",
-    short: "Látex, esmaltes, imprimantes",
-    description:
-      "Línea completa de pinturas para interiores y exteriores. Imprimantes, selladores, esmaltes y rodillos.",
-    image: img,
-    items: [
-      "Látex satinado",
-      "Esmalte sintético",
-      "Imprimante",
-      "Rodillos y brochas",
-    ],
+      "Comercializamos planchas y casetones de tecnopor de alta calidad, disponibles en diferentes medidas para satisfacer las necesidades de todo tipo de proyectos de construcción",
+    image: planchasTecnopor,
+    items: ['Planchas 1/2", 3/4", 1", 1 1/2", 2"', 'Casetones 12 y 15'],
   },
 ];
 

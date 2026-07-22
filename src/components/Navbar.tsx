@@ -42,7 +42,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="tel:+51964869923"
+            href="tel:+51994045254"
             className="inline-flex items-center gap-2 rounded-md bg-brand-orange px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-orange-dark hover:shadow-md"
           >
             <Phone className="h-4 w-4" />

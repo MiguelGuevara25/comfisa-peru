@@ -33,12 +33,12 @@ export default function Locales() {
             >
               {/* Cover photo */}
               <div className="relative aspect-16/6 w-full overflow-hidden bg-surface sm:aspect-16/5">
-                {/* <ResponsivePicture
+                <ResponsivePicture
                   data={l.image}
                   alt={`Fachada del local ${l.name} de Comfisa`}
                   sizes="(min-width: 1280px) 1200px, 100vw"
                   className="h-full w-full object-cover"
-                /> */}
+                />
                 <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-3 p-5 sm:p-7">
                   <div>

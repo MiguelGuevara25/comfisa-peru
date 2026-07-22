@@ -1,5 +1,6 @@
 import { LucideIcon } from "lucide-react";
 import { StaticImageData } from "next/image";
+import { ResponsivePictureSource } from "../components/ResponsivePicture";
 
 export interface Location {
   slug: string;
@@ -10,7 +11,7 @@ export interface Location {
   phones: string[];
   hours: { weekdays: string; saturday: string };
   mapQuery: string;
-  image: StaticImageData;
+  image: ResponsivePictureSource;
 }
 
 export interface Category {
@@ -27,3 +28,4 @@ export interface Values {
   title: string;
   desc: string;
 }
+

@@ -20,7 +20,7 @@ export default function Footer() {
             </div>
             <p className="text-sm leading-relaxed text-white/75">
               Distribuidora de materiales de construcción al por mayor y menor.
-              5 locales en Lima para atender su obra con stock, precios y confianza.
+              4 locales en Lima para atender su obra con stock, precios y confianza.
             </p>
           </div>
 
@@ -63,7 +63,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Comfisa - Materiales de Construcción. Todos los derechos reservados.</p>
           <div className="flex flex-wrap gap-5">
             <span className="flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> L-V 7:30-17:30 · S 7:30-14:00</span>
-            <span className="flex items-center gap-1.5"><Mail className="h-3.5 w-3.5" /> ventas@comfisa.com.pe</span>
+            <span className="flex items-center gap-1.5"><Mail className="h-3.5 w-3.5" /> ventas@grupocomfisa.com</span>
           </div>
         </div>
       </div>

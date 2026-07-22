@@ -24,7 +24,7 @@ export default function Contacto() {
 
             <div className="mt-8 space-y-3">
               <a
-                href="tel:+51964869923"
+                href="tel:+51994045254"
                 className="flex items-center gap-4 rounded-xl border border-border bg-background p-4 hover:border-brand-orange hover:bg-surface"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-blue text-white">
@@ -34,7 +34,7 @@ export default function Contacto() {
                   <p className="text-xs uppercase text-muted-foreground">
                     Teléfono
                   </p>
-                  <p className="font-semibold text-brand-blue">964 869 923</p>
+                  <p className="font-semibold text-brand-blue">994 045 254</p>
                 </div>
               </a>
               <a

@@ -16,9 +16,9 @@ export default function Productos() {
             Productos para cada etapa de tu obra
           </h1>
           <p className="mt-4 max-w-2xl text-white/80">
-            Desde el cimiento hasta los acabados finales. Conoce nuestras 9
-            categorías principales y solicita cotización directamente por
-            WhatsApp o teléfono.
+            Desde el cimiento hasta los acabados finales. Conoce nuestras{" "}
+            {categories.length} categorías principales y solicita cotización
+            directamente por WhatsApp o teléfono.
           </p>
         </div>
       </section>
@@ -60,12 +60,12 @@ export default function Productos() {
                 <span className="text-xs font-semibold uppercase tracking-widest text-brand-orange">
                   {`0${i + 1}`.slice(-2)} · Categoría
                 </span>
-                <h2 className="mt-2 text-3xl font-bold text-brand-blue">
+                <h2 className="mt-2 text-3xl font-bold text-brand-blue uppercase">
                   {c.name}
                 </h2>
-                <p className="mt-2 text-sm font-medium text-muted-foreground">
+                {/* <p className="mt-2 text-sm font-medium text-muted-foreground">
                   {c.short}
-                </p>
+                </p> */}
                 <p className="mt-4 text-foreground/85">{c.description}</p>
                 <ul className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {c.items.map((it) => (
