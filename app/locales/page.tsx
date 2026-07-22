@@ -104,7 +104,7 @@ export default function Locales() {
                   <LazyMap
                     title={`Mapa de ${l.name}`}
                     src={mapEmbedUrl(l.mapQuery)}
-                    className="h-72 w-full md:h-full md:min-h-[320px]"
+                    className="h-72 w-full md:h-full md:min-h-80"
                   />
                 </div>
               </div>
